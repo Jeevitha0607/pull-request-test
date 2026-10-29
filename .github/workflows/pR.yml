@@ -1,0 +1,21 @@
+
+name: Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print message
+        run: echo "Pull Request triggered successfully!"
+
+      - name: Check code
+        run: echo "Running basic checks..."
